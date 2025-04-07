@@ -1,5 +1,5 @@
 /*************************************************************************
- *	Challenge_1_Firmware:   main.c
+ *  Challenge_1_Firmware:   main.c
  * 	                        This is only to demostrate how to use the PCL6046
  *                          interface.  There is no expectation that it will
  *                          run as written because the project is only partially
