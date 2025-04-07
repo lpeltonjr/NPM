@@ -6,12 +6,12 @@
  *  Engineer:               Larry Pelton
  *
  ************************************************************************/
-#define		PCL6046_COMM_C
+#define     PCL6046_COMM_C
 
-#include	<stdint.h>
-#include	<stdbool.h>
+#include    <stdint.h>
+#include    <stdbool.h>
 
-#include	"PCL6046.h"
+#include    "PCL6046.h"
 #include    "PCL6046_maint.h"
 #include    "PCL6046_comm.h"
 #include    "PCL6046_limit.h"
