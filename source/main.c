@@ -1,15 +1,15 @@
 /*************************************************************************
- *	Challenge_1_Firmware:	main.c
- * 							This is only to demostrate how to use the PCL6046
+ *	Challenge_1_Firmware:   main.c
+ * 	                        This is only to demostrate how to use the PCL6046
  *                          interface.  There is no expectation that it will
  *                          run as written because the project is only partially
  *                          complete.  This hasn't been compiled in STM32Cube,
  *                          so it has only been checked for syntax errors by
  *                          my reading over it.
  *
- *  Engineer:				Larry Pelton
+ *  Engineer:               Larry Pelton
  *
-  ************************************************************************/
+ ************************************************************************/
 #define		MAIN_C
 
 #include	<stdint.h>
