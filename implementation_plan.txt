@@ -12,6 +12,8 @@ Implementation:
     c)  COUNTER1 of each axis is the source for the absolute position in pulse counts
 
 -----X--------------Y--------------Z-------------U---------
+Ignoring the width of the objects X, Y, Z, and U:
+
 X is COUNTER1 for X axis (leftmost object);
 Y is COUNTER1 for Y axis;
 Z is COUNTER1 for Z axis;
