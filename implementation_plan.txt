@@ -1,0 +1,26 @@
+Implementation:
+
+1)  Study PCL6046 ASIC user manual and online sources for familiarity with motion controllers.
+2)  Code communication routines for STM32 to control PCL6046.
+3)  Create FreeRTOS superstructure for tasks specified in challenge description.
+4)  Create the limit task using what ASIC user manual says about software limits and
+    what seems reasonable, assuming:
+    a)  user specifies a safe distance in pulse counts;
+    b)  between any 2 carriers/axes, + limit on the left side and - limit on the right side
+        must be calculated from the current positions of the carriers/axes and the safe distance to
+        be maintained;
+    c)  COUNTER1 of each axis is the source for the absolute position in pulse counts
+
+-----X--------------Y--------------Z-------------U---------
+X is COUNTER1 for X axis (rightmost object);
+Y is COUNTER1 for Y axis;
+Z is COUNTER1 for Z axis;
+U is COUNTER1 for U axis (leftmost object)
+
+(Y - X) >= safe distance
+(Y - safe distance) is + limit for X
+(X + safe distance) is - limit for Y
+
+- limit for X and + limit for U will not be set, since I don't know the length of the track
+
+5)  Create an extra task to light LED(s)
