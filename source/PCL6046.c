@@ -1,12 +1,12 @@
 /*************************************************************************
  *	Challenge_1_Firmware:	PCL6046.c
- * 							CPU-to-PCL6046 Interface
+ *							CPU-to-PCL6046 Interface
  *
- *  Engineer:				Larry Pelton
+ *	Engineer:				Larry Pelton
  *
- * 							NOTE that it is assumed the controller board
- * 							is configured to select Motorola 68000
- * 							communication for STM32 to ASIC.
+ *							NOTE that it is assumed the controller board
+ *							is configured to select Motorola 68000
+ *							communication for STM32 to ASIC.
  ************************************************************************/
 #define		PCL6046_C
 
@@ -18,11 +18,11 @@
 
 
 /*************************************************************************
- * @brief		write_command
- * 				Primitive function for writing a command to PCL6046.
- * @param[in]	command is the command word taken from enumeration ASIC_CMD.
- * @param[in]	axis is a bitfield where axis:bit == X:0, Y:1, Z:2, U:3
- * @returns		none
+ *	@brief		write_command
+ *				Primitive function for writing a command to PCL6046.
+ *	@param[in]	command is the command word taken from enumeration ASIC_CMD.
+ *	@param[in]	axis is a bitfield where axis:bit == X:0, Y:1, Z:2, U:3
+ *	@returns	none
  ************************************************************************/
 void write_command(ASIC_CMD command, uint8_t axis)
 {
@@ -51,15 +51,15 @@ void write_command(ASIC_CMD command, uint8_t axis)
 
 
 /*************************************************************************
- * @brief		write_register
- * 				Primitive function for writing to a 32-bit PCL6046 ASIC
- * 				register.
- * @param[in]	register is an enumerated register read command taken from
- * 				section 5.3.2.10 of the PCL6046 user manual; the write
- * 				register command is derived by clearing bit 6
- * @param[in]	axis is a bitfield where axis:bit == X:0, Y:1, Z:2, U:3
- * @param[in]	value is what's to be written to the register
- * @returns		none
+ *	@brief		write_register
+ *				Primitive function for writing to a 32-bit PCL6046 ASIC
+ *				register.
+ *	@param[in]	register is an enumerated register read command taken from
+ *				section 5.3.2.10 of the PCL6046 user manual; the write
+ *				register command is derived by clearing bit 6
+ *	@param[in]	axis is a bitfield where axis:bit == X:0, Y:1, Z:2, U:3
+ *	@param[in]	value is what's to be written to the register
+ *	@returns	none
  ************************************************************************/
 void write_register(ASIC_REG register, uint8_t axis, uint32_t value)
 {
@@ -122,16 +122,16 @@ void write_register(ASIC_REG register, uint8_t axis, uint32_t value)
 }
 
 /*************************************************************************
- * @brief		read_registers
- * 				Primitive function for reading from 32-bit PCL6046 ASIC
- * 				register in 1 to 4 axes.
- * @param[in]	register is an enumerated register read command taken from
- * 				section 5.3.2.10 of the PCL6046 user manual
- * @param[in]	axis is a bitfield where axis:bit == X:0, Y:1, Z:2, U:3
- * @param[out]	results points to an array of 4, 32-bit register values;
- * 				index 0 corresponds to the X axis, index 3 corresponds to
- * 				the U axis
- * @returns		none
+ *	@brief		read_registers
+ *				Primitive function for reading from 32-bit PCL6046 ASIC
+ *				register in 1 to 4 axes.
+ *	@param[in]	register is an enumerated register read command taken from
+ *				section 5.3.2.10 of the PCL6046 user manual
+ *	@param[in]	axis is a bitfield where axis:bit == X:0, Y:1, Z:2, U:3
+ *	@param[out]	results points to an array of 4, 32-bit register values;
+ *				index 0 corresponds to the X axis, index 3 corresponds to
+ *				the U axis
+ *	@returns	none
  ************************************************************************/
 void read_registers(ASIC_REG register, uint8_t axis, uint32_t *results)
 {
@@ -181,12 +181,12 @@ void read_registers(ASIC_REG register, uint8_t axis, uint32_t *results)
 }
 
 /*************************************************************************
- * @brief		ReadReg
- * 				This is the read register routine required by the challenge.
- * 				I think the axis is required, so I added it as an argument.
- * @param[in]	RegName is the register name, taken from enumeration ASIC_REG
- * @param[in]	axis identifies the X, Y, Z, or U axis
- * @returns		the value read from the specified register
+ *	@brief		ReadReg
+ *				This is the read register routine required by the challenge.
+ *				I think the axis is required, so I added it as an argument.
+ *	@param[in]	RegName is the register name, taken from enumeration ASIC_REG
+ *	@param[in]	axis identifies the X, Y, Z, or U axis
+ *	@returns	the value read from the specified register
  ************************************************************************/
 uint32_t ReadReg(ASIC_REG RegName, MOTION_AXIS axis)
 {
@@ -198,13 +198,13 @@ uint32_t ReadReg(ASIC_REG RegName, MOTION_AXIS axis)
 }
 
 /*************************************************************************
- * @brief		WriteReg
- * 				This is the write register routine required by the challenge.
- * 				I think the axis is required, so I added it as an argument.
- * @param[in]	RegName is the register name, taken from enumeration ASIC_REG
- * @param[in]	axis identifies the X, Y, Z, or U axis
- * @param[in]	value is the value to be written
- * @returns		none
+ *	@brief		WriteReg
+ *				This is the write register routine required by the challenge.
+ *				I think the axis is required, so I added it as an argument.
+ *	@param[in]	RegName is the register name, taken from enumeration ASIC_REG
+ *	@param[in]	axis identifies the X, Y, Z, or U axis
+ *	@param[in]	value is the value to be written
+ *	@returns	none
  ************************************************************************/
 void WriteReg(ASIC_REG RegName, MOTION_AXIS axis, uint32_t value)
 {
@@ -212,9 +212,9 @@ void WriteReg(ASIC_REG RegName, MOTION_AXIS axis, uint32_t value)
 }
 
 /*************************************************************************
- * @brief		init_PCL6046_resources
- * 				Creates static RTOS entities needed to for the PCL6046 interface.
- * @returns		true, if no errors were encountered; false, otherwise
+ *	@brief		init_PCL6046_resources
+ *				Creates static RTOS entities needed to for the PCL6046 interface.
+ *	@returns	true, if no errors were encountered; false, otherwise
  ************************************************************************/
 bool init_PCL6046_resources(void)
 {
@@ -234,9 +234,9 @@ bool init_PCL6046_resources(void)
 }
 
 /*************************************************************************
- * @brief		destroy_PCL6046_resources
- * 				Deletes static RTOS entities needed to for the PCL6046 interface.
- * @returns		none
+ *	@brief		destroy_PCL6046_resources
+ *				Deletes static RTOS entities needed to for the PCL6046 interface.
+ *	@returns	none
  ************************************************************************/
 void destroy_PCL6046_resources(void)
 {

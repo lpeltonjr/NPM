@@ -1,12 +1,12 @@
 /*************************************************************************
  *	Challenge_1_Firmware:	PCL6046.h
- * 							Definitions for CPU-to-PCL6046 Interface
+ *							Definitions for CPU-to-PCL6046 Interface
  *
- *  Engineer:				Larry Pelton
+ *	Engineer:				Larry Pelton
  *
- * 							NOTE that it is assumed the controller board
- * 							is configured to select Motorola 68000
- * 							communication for STM32 to ASIC.
+ *							NOTE that it is assumed the controller board
+ *							is configured to select Motorola 68000
+ *							communication for STM32 to ASIC.
  ************************************************************************/
 #ifndef		PCL6046_H
 	#define	PCL6046_H
@@ -227,8 +227,8 @@
 
 	//	axis selection written to upper byte of COMW register
 	#define	AXIS_X_MASK	1
-	#define AXIS_Y_MASK 2
-	#define AXIS_Z_MASK 4
+	#define AXIS_Y_MASK	2
+	#define AXIS_Z_MASK	4
 	#define	AXIS_U_MASK	8
 
 	#ifdef	PCL6046_C

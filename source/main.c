@@ -1,6 +1,6 @@
 /*************************************************************************
  *  Challenge_1_Firmware:   main.c
- * 	                        This is only to demostrate how to use the PCL6046
+ *                          This is only to demostrate how to use the PCL6046
  *                          interface.  There is no expectation that it will
  *                          run as written because the project is only partially
  *                          complete.  This hasn't been compiled in STM32Cube,
@@ -15,7 +15,7 @@
 #include	<stdint.h>
 #include	<stdbool.h>
 
-#include	"PCL6046.h"
+#include    "PCL6046.h"
 #include    "PCL6046_maint.h"
 #include    "PCL6046_comm.h"
 

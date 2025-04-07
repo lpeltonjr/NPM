@@ -1,11 +1,11 @@
 /*************************************************************************
- *	Challenge_1_Firmware:	PCL6046_comm.c
- * 							Handles USB and SOC/ASIC communication, as
+ *  Challenge_1_Firmware:   PCL6046_comm.c
+ *                          Handles USB and SOC/ASIC communication, as
  *                          specified in challenge description
  *
- *  Engineer:				Larry Pelton
+ *  Engineer:               Larry Pelton
  *
-  ************************************************************************/
+ ************************************************************************/
 #define		PCL6046_COMM_C
 
 #include	<stdint.h>
@@ -18,13 +18,13 @@
 
 
 /*************************************************************************
- * @brief		ASIC_comm
- * 				This RTOS task handles execution of ASIC tasks demanded
+ *  @brief      ASIC_comm
+ *              This RTOS task handles execution of ASIC tasks demanded
  *              by the user over USB.  This task will pend until something
  *              is received from the USB interface, which isn't shown and
  *              only theorized for the purpose of this challenge.
- * @param[in]	pvParameters is ignored, currently
- * @returns		none
+ *  @param[in]  pvParameters is ignored, currently
+ *  @returns    none
  ************************************************************************/
 void ASIC_comm(void *pvParameters)
 {

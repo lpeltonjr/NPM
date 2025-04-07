@@ -1,7 +1,7 @@
 /*************************************************************************
- *	Challenge_1_Firmware:	PCL6046_limit.h
+ *  Challenge_1_Firmware:   PCL6046_limit.h
  *
- *  Engineer:				Larry Pelton
+ *  Engineer:               Larry Pelton
  *
  ************************************************************************/
 #ifndef     PCL6046_LIMIT_H

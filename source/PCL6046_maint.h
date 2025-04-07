@@ -1,7 +1,7 @@
 /*************************************************************************
- *	Challenge_1_Firmware:	PCL6046_maint.h
+ *  Challenge_1_Firmware:   PCL6046_maint.h
  *
- *  Engineer:				Larry Pelton
+ *  Engineer:               Larry Pelton
  *
  ************************************************************************/
 #ifndef         PCL6046_MAINT_H

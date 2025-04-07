@@ -1,10 +1,10 @@
 /*************************************************************************
- *	Challenge_1_Firmware:	PCL6046_limit.c
- * 							Thread to set limit function of 4 axes to
+ *  Challenge_1_Firmware:   PCL6046_limit.c
+ *                          Thread to set limit function of 4 axes to
  *                          prevent collisions, since all 4 axes are
  *                          in the same physical dimension for this application.
  *
- *  Engineer:				Larry Pelton
+ *  Engineer:               Larry Pelton
  *
   ************************************************************************/
 #define		PCL6046_LIMIT_C
@@ -19,13 +19,13 @@
 
 
 /*************************************************************************
- * @brief		ASIC_limit
- * 				This RTOS task monitors positions of each axis from the
+ *  @brief      ASIC_limit
+ *              This RTOS task monitors positions of each axis from the
  *              COUNTER1 values and adjust the software limits of each
  *              axis to prevent collisions.
- * @param[in]	pvParameters points to the message from the USB user that
+ *  @param[in]  pvParameters points to the message from the USB user that
  *              caused this thread to be created
- * @returns		none
+ *  @returns    none
  ************************************************************************/
 
 void ASIC_limit(void *pvParameters)
@@ -143,11 +143,11 @@ void ASIC_limit(void *pvParameters)
 
 
 /*************************************************************************
- * @brief		ASIC_limit_indicators
- * 				This thread assumes 1 LED exists per axis.  An LED is lit
+ *  @brief      ASIC_limit_indicators
+ *              This thread assumes 1 LED exists per axis.  An LED is lit
  *              if the motor has stopped due to software limits.
- * @param[in]	pvParameters is unused here
- * @returns		none
+ *  @param[in]  pvParameters is unused here
+ *  @returns    none
  ************************************************************************/
 void ASIC_limit_indicators(void *pvParameters)
 {

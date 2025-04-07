@@ -1,13 +1,13 @@
 /*************************************************************************
- *	Challenge_1_Firmware:	PCL6046_maint.c
- * 							Handles periodic register access of PCL6046,
+ *  Challenge_1_Firmware:   PCL6046_maint.c
+ *                          Handles periodic register access of PCL6046,
  *                          as specified in challenge description.  It should
  *                          be populated with polling for ASIC interrupts, etc.
  *                          Currently, it's just reading the main status registers,
  *                          which can then be read from external functions
  *                          with the getter routine provided.
  *
- *  Engineer:				Larry Pelton
+ *  Engineer:               Larry Pelton
  *
   ************************************************************************/
 #define		PCL6046_MAINT_C
@@ -19,10 +19,10 @@
 #include    "PCL6046_maint.h"
 
 /*************************************************************************
- * @brief		get_axial_status
- * 				Get method for status of PCL6046 on a selected axis
- * @param[in]	axis identifies X, Y, Z, or U axis
- * @returns		the 16-bit status register value
+ *  @brief:     get_axial_status
+ *              Get method for status of PCL6046 on a selected axis
+ *  @param[in]  axis identifies X, Y, Z, or U axis
+ *  @returns    the 16-bit status register value
  ************************************************************************/
 uint16_t get_axial_status(MOTION_AXIS axis)
 {
@@ -30,12 +30,12 @@ uint16_t get_axial_status(MOTION_AXIS axis)
 }
 
 /*************************************************************************
- * @brief		ASIC_maintenance
- * 				This RTOS task handles periodic maintenance of the PCL6046 interface.
+ *  @brief      ASIC_maintenance
+ *              This RTOS task handles periodic maintenance of the PCL6046 interface.
  *              The period of execution is set via ASIC_MAINT_PERIOD and
  *              is measured in milliseconds.
- * @param[in]	pvParameters is ignored, currently
- * @returns		none
+ *  @param[in]  pvParameters is ignored, currently
+ *  @returns    none
  ************************************************************************/
 void ASIC_maintenance(void *pvParameters)
 {
