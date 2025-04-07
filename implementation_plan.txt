@@ -12,10 +12,10 @@ Implementation:
     c)  COUNTER1 of each axis is the source for the absolute position in pulse counts
 
 -----X--------------Y--------------Z-------------U---------
-X is COUNTER1 for X axis (rightmost object);
+X is COUNTER1 for X axis (leftmost object);
 Y is COUNTER1 for Y axis;
 Z is COUNTER1 for Z axis;
-U is COUNTER1 for U axis (leftmost object)
+U is COUNTER1 for U axis (rightmost object)
 
 (Y - X) >= safe distance
 (Y - safe distance) is + limit for X
